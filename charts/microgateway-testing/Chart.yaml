@@ -14,6 +14,5 @@ maintainers:
 - email: support@airlock.com
   name: Airlock
 name: microgateway-testing
-type: application
 version: 0.1.6
 appVersion: 7.4
