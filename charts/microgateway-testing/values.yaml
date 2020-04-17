@@ -7,4 +7,3 @@ echo-server:
 testservlet:
   enabled: true
   fullnameOverride: testservlet
-  
