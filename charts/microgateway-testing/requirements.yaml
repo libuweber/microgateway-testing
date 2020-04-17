@@ -1,0 +1,11 @@
+dependencies:
+    - name: echo-server
+      version: 0.3.0
+      repository: https://ealenn.github.io/charts
+      condition: echo-server.enabled
+    - name: microgateway
+      version: 0.3.4
+      repository: https://libuweber.github.io/microgateway
+    - name: testservlet
+      version: 1.0
+      condition: testservlet.enabled

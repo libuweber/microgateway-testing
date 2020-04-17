@@ -1,0 +1,9 @@
+echo-server:
+  enabled: false
+  fullnameOverride: backend-service
+  service:
+    port: 8080
+
+testservlet:
+  enabled: true
+  fullnameOverride: testservlet

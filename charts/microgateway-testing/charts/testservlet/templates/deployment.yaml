@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "testservlet.fullname" . }}
+  labels:
+    {{- include "testservlet.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "testservlet.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "testservlet.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+      - name: {{ .Chart.Name }}
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        ports:
+        - name: http
+          containerPort: {{ int .Values.port }}
+        readinessProbe:
+          httpGet:
+            path: {{ .Values.readinessProbe.path }}
+            port: {{ int .Values.port }}
+            scheme: {{ .Values.readinessProbe.scheme }}
+          initialDelaySeconds: {{ int .Values.readinessProbe.initialDelaySeconds }}
+          failureThreshold: {{ int .Values.readinessProbe.failureThreshold }}
+          periodSeconds: {{ int .Values.readinessProbe.periodSeconds }}
+          successThreshold: {{ int .Values.readinessProbe.successThreshold }}
+          timeoutSeconds: {{ int .Values.readinessProbe.timeoutSeconds }}
+        livenessProbe:
+          httpGet:
+            path: {{ .Values.livenessProbe.path }}
+            port: {{ .Values.port }}
+            scheme: {{ .Values.livenessProbe.scheme }}
+          initialDelaySeconds: {{ int .Values.livenessProbe.initialDelaySeconds }} 
+          failureThreshold: {{ int .Values.livenessProbe.failureThreshold }}
+          periodSeconds: {{ int .Values.livenessProbe.periodSeconds }}
+          successThreshold: {{ int .Values.livenessProbe.successThreshold }}
+          timeoutSeconds: {{ int .Values.livenessProbe.timeoutSeconds }}

@@ -1,0 +1,19 @@
+apiVersion: v2
+description: TestServlet for Web Application firewall (WAF).
+home: https://www.airlock.com
+keywords:
+- Web Application Firewall
+- WAF
+- Airlock
+- MicroGateway
+- Security
+- Filtering
+- Testing
+- testservlet
+- Tomcat
+maintainers:
+- email: support@airlock.com
+  name: Airlock
+name: testservlet
+type: application
+version: 1.0
