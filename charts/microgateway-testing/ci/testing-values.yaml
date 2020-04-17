@@ -1,12 +1,12 @@
 testservlet:
-    imagePullSecrets: dockersecret
+  imagePullSecrets: dockersecret
 microgateway:
-    image:
-        repository: julianbe/microgateway
-        tag: 7.4.sprint10_Build008
-      config:
-        existingSecret: "microgatewaysecrets"
-      imagePullSecrets:
-        - name: "dockersecret"
-      ingress:
-        enabled: true
+  image:
+    repository: julianbe/microgateway
+    tag: 7.4.sprint10_Build008
+  config:
+    existingSecret: "microgatewaysecrets"
+imagePullSecrets:
+  - name: "dockersecret"
+ingress:
+  enabled: true
