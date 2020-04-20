@@ -1,0 +1,12 @@
+dependencies:
+- name: echo-server
+  repository: https://ealenn.github.io/charts
+  version: 0.3.0
+- name: microgateway
+  repository: https://libuweber.github.io/microgateway
+  version: 0.3.4
+- name: testservlet
+  repository: ""
+  version: "1"
+digest: sha256:fa8692f147ef1eacba7e44c8d5298f2b0ab60d8de6fa015646266c698c903a8e
+generated: "2020-04-17T16:33:39.165602+02:00"

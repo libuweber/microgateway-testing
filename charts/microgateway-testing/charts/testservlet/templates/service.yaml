@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "testservlet.fullname" . }}
+  labels:
+    {{- include "testservlet.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "testservlet.selectorLabels" . | nindent 4 }}
+  ports:
+  - name: http
+    protocol: {{ .Values.protocol }}
+    port: {{ .Values.exposedport }}
+    targetPort: {{ .Values.port }}

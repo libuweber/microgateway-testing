@@ -1,0 +1,38 @@
+Airlock {{ template "chart.header" . }}
+
+{{ template "chart.description" . }}
+
+:warning: **For internal testing purposes only.**:
+
+## Adding the Repository
+
+To add the chart repository:
+
+```console
+helm repo add airlock https://libuweber.github.io/microgateway/
+```
+
+## Installing the Chart
+
+To install the chart with the release name `airlock-waf`:
+
+```console
+helm upgrade -i airlock-waf airlock/microgateway-testing
+```
+
+## Uninstalling the Chart
+
+To uninstall the chart with the release name `airlock-waf`:
+
+```console
+helm uninstall airlock-waf
+```
+
+## Configuration
+
+{{ template "chart.valuesTable" . }}
+
+## Chart dependencies
+The helm chart has optional dependencies which can be activated.
+
+{{ template "chart.requirementsTable" . }}
