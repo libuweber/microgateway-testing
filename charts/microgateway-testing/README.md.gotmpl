@@ -9,23 +9,23 @@ Airlock {{ template "chart.header" . }}
 To add the chart repository:
 
 ```console
-helm repo add airlock https://libuweber.github.io/microgateway/
+helm repo add airlock-testing https://libuweber.github.io/microgateway-testing/
 ```
 
 ## Installing the Chart
 
-To install the chart with the release name `airlock-waf`:
+To install the chart with the release name `airlock-testing`:
 
 ```console
-helm upgrade -i airlock-waf airlock/microgateway-testing
+helm upgrade -i airlock-testing airlock/microgateway-testing
 ```
 
 ## Uninstalling the Chart
 
-To uninstall the chart with the release name `airlock-waf`:
+To uninstall the chart with the release name `airlock-testing`:
 
 ```console
-helm uninstall airlock-waf
+helm uninstall airlock-testing
 ```
 
 ## Configuration
