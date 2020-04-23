@@ -11,7 +11,7 @@ git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 ./helm-docs
 
 git checkout  ${BRANCH_NAME}
-git add charts/microgateway/README.md
+git add charts/microgateway-testing/README.md
 git commit -m "Automated README generation"
 echo "Push to ${BRANCH_NAME}"
 git push "https://$GITHUB_ACTOR:$CR_TOKEN@github.com/libuweber/microgateway-testing.git" ${BRANCH_NAME}
