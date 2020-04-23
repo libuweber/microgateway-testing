@@ -50,4 +50,4 @@ The helm chart has optional dependencies which can be activated.
 |------------|------|---------|
 |  | testservlet | 1.0 |
 | https://ealenn.github.io/charts | echo-server | 0.3.0 |
-| https://libuweber.github.io/microgateway | microgateway | 0.3.4 |
+| https://libuweber.github.io/microgateway | microgateway | 0.3.8 |
