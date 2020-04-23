@@ -4,9 +4,9 @@ dependencies:
   version: 0.3.0
 - name: microgateway
   repository: https://libuweber.github.io/microgateway
-  version: 0.3.4
+  version: 0.3.8
 - name: testservlet
   repository: ""
   version: "1"
-digest: sha256:fa8692f147ef1eacba7e44c8d5298f2b0ab60d8de6fa015646266c698c903a8e
-generated: "2020-04-17T16:33:39.165602+02:00"
+digest: sha256:fbf9f8614814b29b233a4ee2b62cc7a5484f0b33b7d5d26de4f97d15e53b4802
+generated: "2020-04-23T13:35:38.145512+02:00"
