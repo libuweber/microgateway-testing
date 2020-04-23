@@ -4,7 +4,7 @@ dependencies:
       repository: https://ealenn.github.io/charts
       condition: echo-server.enabled
     - name: microgateway
-      version: 0.3.4
+      version: 0.3.8
       repository: https://libuweber.github.io/microgateway
     - name: testservlet
       version: 1.0

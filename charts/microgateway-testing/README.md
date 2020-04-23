@@ -3,7 +3,7 @@ Airlock microgateway-testing
 
 Testing chart for Web Application firewall (WAF).
 
-:warning: **For internal testing purposes only.**:
+:warning: **For internal testing purposes only.**
 
 ## Adding the Repository
 
@@ -38,6 +38,10 @@ helm uninstall airlock-testing
 | echo-server.service.port | int | `8080` |  |
 | testservlet.enabled | bool | `true` |  |
 | testservlet.fullnameOverride | string | `"testservlet"` |  |
+
+### Testservlet
+
+The documentation of the testservlet can be found under the following link. [Testservlet](https://github.com/libuweber/microgateway-testing/tree/master/charts/microgateway-testing/charts/testservlet)
 
 ## Chart dependencies
 The helm chart has optional dependencies which can be activated.
