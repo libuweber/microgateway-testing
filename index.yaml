@@ -3,6 +3,40 @@ entries:
   microgateway-testing:
   - apiVersion: v1
     appVersion: "7.4"
+    created: "2020-04-23T12:08:53.830186232Z"
+    dependencies:
+    - condition: echo-server.enabled
+      name: echo-server
+      repository: https://ealenn.github.io/charts
+      version: 0.3.0
+    - name: microgateway
+      repository: https://libuweber.github.io/microgateway
+      version: 0.3.8
+    - condition: testservlet.enabled
+      name: testservlet
+      repository: ""
+      version: "1"
+    description: Testing chart for Web Application firewall (WAF).
+    digest: 560ee47c02c64c5acb669483f0d6687e1ebb5aa3f4711bf713bc6160853fbdb9
+    home: https://www.airlock.com
+    keywords:
+    - Web Application Firewall
+    - WAF
+    - Airlock
+    - MicroGateway
+    - Security
+    - Filtering
+    - Testing
+    - Echo-Server
+    maintainers:
+    - email: support@airlock.com
+      name: Airlock
+    name: microgateway-testing
+    urls:
+    - https://github.com/libuweber/microgateway-testing/releases/download/microgateway-testing-0.1.7/microgateway-testing-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v1
+    appVersion: "7.4"
     created: "2020-04-20T06:47:21.843236489Z"
     dependencies:
     - condition: echo-server.enabled
